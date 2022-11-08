@@ -19,8 +19,16 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
+        'lastname',
         'email',
         'password',
+        // 'cedula',
+        'nro_licencia',
+        // 'telefono',
+        // 'foto_licencia',
+        // 'fecha_nacimiento',
+        // 'fecha_licencia',
+        // 'fecha_licencia_venc',
     ];
 
     /**
@@ -41,4 +49,19 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+   public function adminlte_image()
+    {
+        return './resources/images/paisaje.jpg';
+    }
+
+    public function adminlte_desc()
+    {
+        return 'Administrador';
+    }
+
+    public function adminlte_profile_url()
+    {
+        return 'profile/username';
+    }
 }

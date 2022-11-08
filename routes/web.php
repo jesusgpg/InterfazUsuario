@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -22,6 +24,6 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/usuarios', [UserController::class, 'show'])->name('usuarios');
+// Route::get('/usuarios', [UserController::class, 'show'])->name('usuarios');
 
-Route::get('/perfil', [UserController::class, 'index'])->name('perfil');
+// Route::get('/perfil', [UserController::class, 'index'])->name('perfil');

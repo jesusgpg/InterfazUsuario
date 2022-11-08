@@ -1,16 +1,20 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
     public function index(){
-        return view('usuarios.perfil');
+
+        $users = User::all();
+
+        return view('admin.users', compact('users'));
+        // return view('admin.users');
     }
 
     public function show(){
-        return view('usuarios.usuarios');
+        return view('admin.settings');
     }
 }
