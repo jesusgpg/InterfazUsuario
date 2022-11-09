@@ -1,16 +1,3 @@
-{{-- @extends('layouts.app')
-@section('title', 'MyApp')
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-        CONTENT
-        </div>
-    </div>
-</div>
-
-@endsection --}}
-
 @extends('adminlte::page')
 
 @section('title', 'Inicio')
@@ -22,7 +9,7 @@
 @section('content')
 <div class="card">
     <div class="card-header">
-    <p>Tabla de usuarios</p>
+    <p>THome Usuario</p>
     </div>
     <div class="card-body">
         <p>Usuario body</p>

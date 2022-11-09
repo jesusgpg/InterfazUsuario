@@ -9,10 +9,9 @@
 @endsection
 
 @section('content')
-<div> AAA </div>
 
 <table class ="table table-striped" id="usuarios">
-
+  <button> <a href="{{route('admin.usernew')}}"> Nuevo Usuario </a></button> 
   <thead>
     <th>Cédula</th>
     <th>Nro de Licencia</th>
@@ -29,9 +28,9 @@
         <td> {{$user->name}} {{$user->lastname}} </td>
         {{-- <td> {{$user->lastname}} </td> --}}
         <td> {{$user->email}} </td>
-        <td> {{$user->created_at->diffForHumans()}}</td>
+        {{-- <td> {{$user->created_at->diffForHumans()}}</td> --}}
         <td> 
-          <button>Editar</button> 
+          <a href="{{route('usuarios.show', $user)}}"> Editar Usuario </a>
           <button>Eliminar</button>
         </td>
       </tr>

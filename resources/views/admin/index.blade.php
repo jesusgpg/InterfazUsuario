@@ -13,10 +13,10 @@
 @section('content')
 <div class="card">
     <div class="card-header">
-    <p>Hola</p>
+    <p>Hola, ADMIN</p>
     </div>
     <div class="card-body">
-        <p> body</p>
+        <p>ADMIN</p>
     </div>
 </div>
 

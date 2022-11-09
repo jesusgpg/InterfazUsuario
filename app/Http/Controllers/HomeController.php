@@ -21,18 +21,20 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
+    // public function __invoke($name, $nickname = null)
+    // {
+    //     $name = ucfirst($name);
+
+    //     if ($nickname) {
+    //         return "Bienvenido {$name}, tu apodo es {$nickname}";
+    //     } else {
+    //         return "Bienvenido {$name}";
+    //     }
+    // }
+
     public function index()
     {
-        return view('admin.index');
+        return view('home');
     }
 
-    // public function users()
-    // {
-    //     return view('admin.users');
-    // }
-
-    // public function index()
-    // {
-    //     return view('home');
-    // }
 }

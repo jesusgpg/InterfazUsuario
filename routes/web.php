@@ -22,8 +22,20 @@ Route::get('/', function () {
 
 Auth::routes();
 
+//Usuario comun
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/perfil/{id}', [UserController::class, 'show'])->name('perfil');
+Route::get('/perfil', [UserController::class, 'show'])->name('perfil');
+// Route::put('/perfil', [UserController::class, 'edit'])->name('perfil.edit');
+// Route::put('/perfil', [UserController::class, 'edit'])->name('perfil');
 
-// Route::get('/usuarios', [UserController::class, 'show'])->name('usuarios');
+// ADMIN
+Route::get('/admin', [UserController::class, 'index'])->name('admin');
+Route::get('/admin/usuarios', [UserController::class, 'showall'])->name('usuarios');
+Route::get('/admin/usuarios/{user}/edit', [UserController::class, 'showid'])->name('usuarios.show');
 
-// Route::get('/perfil', [UserController::class, 'index'])->name('perfil');
+Route::put('/admin/{user}/', [UserController::class, 'update'])->name('usuarios.update');
+
+Route::get('/admin/usuarios/create', [UserController::class, 'create'])->name('admin.usernew');
+Route::post('/admin/usuarios/create', [UserController::class, 'store'])->name('admin.usernew.store');
+// Route::post('/admin/usuarios/{id}/edit'', [UserController::class, 'store'])->name('perfil.store');

@@ -64,4 +64,10 @@ class User extends Authenticatable
     {
         return 'profile/username';
     }
+
+    // Relacion muchos a muchos
+    public function roles(){
+        return $this->belongsToMany('App\Models\Role');
+    }
+
 }

@@ -343,15 +343,16 @@ return [
         //     'label'       => 4,
         //     'label_color' => 'success',
         // ],
+ 
         ['header' => 'Configuraciones'],
         [
             'text' => 'Perfil',
-            'url'  => 'admin/settings',
+            'url'  => 'perfil/',
             'icon' => 'fas fa-fw fa-user',
         ],
         [
             'text' => 'Cambiar Contraseña',
-            'url'  => 'admin/settings',
+            'url'  => 'perfil',
             'icon' => 'fas fa-fw fa-lock',
         ],
         // [
