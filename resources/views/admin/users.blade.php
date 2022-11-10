@@ -31,7 +31,12 @@
         {{-- <td> {{$user->created_at->diffForHumans()}}</td> --}}
         <td> 
           <a href="{{route('usuarios.show', $user)}}"> Editar Usuario </a>
-          <button>Eliminar</button>
+          <form action="{{route('usuarios.destroy', $user)}}" method="POST">
+            @csrf
+            @method('delete')            
+            <button type="submit">Eliminar</button>
+          </form>
+         
         </td>
       </tr>
   @endforeach

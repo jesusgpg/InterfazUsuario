@@ -45,7 +45,13 @@ class UserController extends Controller {
         $user->lastname = $request->lastname;
         $user->nro_licencia = $request->nro_licencia;
         $user->email = $request->email;
-        $user->password = $request->password;
+        $user->password = Hash::make($request->password);
+        $user->telefono = $request->telefono; 
+        $user->cedula = $request->cedula; 
+        $user->fecha_nacimiento = $request->fecha_nacimiento; 
+        $user->fecha_licencia = $request->fecha_licencia; 
+        $user->fecha_licencia_venc = $request->fecha_licencia_venc; 
+        // return  $user;
         $user->save(); 
         return redirect()->route('usuarios.show', $user);
     }
@@ -62,11 +68,20 @@ class UserController extends Controller {
             $user->lastname = $request->lastname;
             $user->nro_licencia = $request->nro_licencia;
             $user->email = $request->email;
-            $user->password = $request->password;
-            
+            $user->password = Hash::make($request->password);
+            $user->telefono = $request->telefono;   
+            $user->cedula = $request->cedula; 
+            $user->fecha_nacimiento = $request->fecha_nacimiento; 
+            $user->fecha_licencia = $request->fecha_licencia; 
+            $user->fecha_licencia_venc = $request->fecha_licencia_venc; 
             $user->save(); 
-            return redirect()->route('usuarios.show', $user);
-        
+            return redirect()->route('usuarios.show', $user);    
+            // return  $user;
+        }
+
+        public function destroy (User $user){
+            $user->delete();
+            return redirect()->route('usuarios');    
         }
 
 }

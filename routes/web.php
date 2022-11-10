@@ -32,9 +32,10 @@ Route::get('/perfil', [UserController::class, 'show'])->name('perfil');
 // ADMIN
 Route::get('/admin', [UserController::class, 'index'])->name('admin');
 Route::get('/admin/usuarios', [UserController::class, 'showall'])->name('usuarios');
-Route::get('/admin/usuarios/{user}/edit', [UserController::class, 'showid'])->name('usuarios.show');
 
+Route::get('/admin/usuarios/{user}/edit', [UserController::class, 'showid'])->name('usuarios.show');
 Route::put('/admin/{user}/', [UserController::class, 'update'])->name('usuarios.update');
+Route::delete('/admin/{user}/', [UserController::class, 'destroy'])->name('usuarios.destroy');
 
 Route::get('/admin/usuarios/create', [UserController::class, 'create'])->name('admin.usernew');
 Route::post('/admin/usuarios/create', [UserController::class, 'store'])->name('admin.usernew.store');

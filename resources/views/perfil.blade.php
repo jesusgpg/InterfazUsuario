@@ -9,8 +9,10 @@
     {{-- <form method="POST" action="{{route('perfil.store')}}"> --}}
     <form method="" action="">
         {{ csrf_field() }}
+        
         <label for="name">Nombre:</label>
-        <input type="text" name="name" id="name" placeholder="{{ Auth::user()->name }}" value="{{ old('name', $user->name) }}">
+        <input type="text" name="name" id="name" placeholder="{{ Auth::user()->name }}"
+         value="{{ old('name', $user->name) }}">
         <br>
 
         <label for="lastname">Apellido:</label>

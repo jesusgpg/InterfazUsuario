@@ -22,13 +22,13 @@ class User extends Authenticatable
         'lastname',
         'email',
         'password',
-        // 'cedula',
+        'cedula',
         'nro_licencia',
-        // 'telefono',
-        // 'foto_licencia',
-        // 'fecha_nacimiento',
-        // 'fecha_licencia',
-        // 'fecha_licencia_venc',
+        'telefono',
+        'foto_licencia',
+        'fecha_nacimiento',
+        'fecha_licencia',
+        'fecha_licencia_venc',
     ];
 
     /**
